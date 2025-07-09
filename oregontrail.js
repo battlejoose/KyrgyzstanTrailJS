@@ -13,7 +13,7 @@ load("sbbsdefs.js");
 //somewhat faithfully version adapted by "larry lagomorph" from 1977 basic code @ http://deserthat.files.wordpress.com/2010/11/oregon1.doc (you can find traces of the BASIC left in this document)
 //contact grudgemirror@gmail.com re:oregontrail with any bug reports (there probably are some i haven't found)
 var version = "0.2.1b";
-console.putmsg("\r\n\r\n\1y                    OREGON TRAIL \1wversion no " + version + "\r\n\r\n\1h\1cby Larry Lagomorph of Futureland BBS \1yvisit us @ futureland.grudgemirror.com\r\n");
+console.putmsg("\r\n\r\n\1y                    KYRGYZSTAN TRAIL \1wversion no " + version + "\r\n\r\n\1h\1cby Larry Lagomorph of Futureland BBS \1yvisit us @ futureland.grudgemirror.com\r\n");
 console.putmsg("\r\n\r\n                       updated August 2014\r\n");
 console.pause();
 console.clear();
@@ -35,7 +35,7 @@ if (highScores == undefined) {
 }
 highScores = db.read("TRAIL", "TRAIL.SCORES", 1);
 db.cycle;
-console.putmsg("\1g        THESE SAVVY ADVENTURERS HAVE SAFELY ARRIVED IN OREGON CITY! \r\n\r\n");
+console.putmsg("\1g        THESE SAVVY ADVENTURERS HAVE SAFELY ARRIVED IN BISHKEK! \r\n\r\n");
 function displayScores() {
     if (highScores.length == 0) {
         console.putmsg("\1h\1w    No one has conquered the trail yet!  Be the \1rfirst \1wname on the list!!! \r\n\r\n");
@@ -149,16 +149,16 @@ function OregonTrail() {
         console.crlf();
         console.crlf();
 // ***INSTRUCTIONS***
-        console.putmsg("\r\n\1hTHIS PROGRAM SIMULATES A TRIP OVER THE OREGON TRAIL FROM");
-        console.putmsg("\r\n\1hINDEPENDENCE MISSOURI TO OREGON CITY, OREGON IN 1847.");
-        console.putmsg("\r\n\1hYOUR FAMILY OF FIVE WILL COVER THE 2040 MILE OREGONTRAIL");
+        console.putmsg("\r\n\1hTHIS PROGRAM SIMULATES A TRIP OVER THE KYRGYZSTAN TRAIL FROM");
+        console.putmsg("\r\n\1hKASHGAR, CHINA TO BISHKEK, KYRGYZSTAN IN 1847.");
+        console.putmsg("\r\n\1hYOUR FAMILY OF FIVE WILL COVER THE 2040 MILE SILK ROAD");
         console.putmsg("\r\n\1hIN 5-6 MONTHS --- IF YOU MAKE IT ALIVE.");
         console.putmsg("\r\n\1hYOU HAD SAVED \1g$900 \1wTO SPEND FOR THE TRIP, AND YOU'VE JUST");
-        console.putmsg("\r\n\1h   PAID \1r$200 FOR A WAGON.");
+        console.putmsg("\r\n\1h   PAID \1r$200 FOR A CARAVAN WAGON.");
         console.putmsg("\r\n\1hYOU WILL NEED TO SPEND THE REST OF YOUR MONEY (\1g$700\1w) ON THE");
         console.putmsg("\r\n\1h   FOLLOWING ITEMS:");
         console.crlf();
-        console.putmsg("\r\n\1h     \1gOXEN \1y*** \1wYOU CAN SPEND \1g$200-$300 \1wON YOUR TEAM");
+        console.putmsg("\r\n\1h     \1gCAMELS \1y*** \1wYOU CAN SPEND \1g$200-$300 \1wON YOUR TEAM");
         console.putmsg("\r\n\1h            THE MORE YOU SPEND, THE FASTER YOU'LL GO");
         console.putmsg("\r\n\1h               BECAUSE YOU'LL HAVE BETTER ANIMALS");
         console.crlf();
@@ -179,9 +179,9 @@ function OregonTrail() {
         console.crlf();
         console.crlf();
         console.putmsg("\r\n\1hYOU CAN SPEND ALL YOUR \1gMONEY\1w BEFORE YOU START YOUR TRIP -");
-        console.putmsg("\r\n\1hOR YOU CAN SAVE SOME OF YOUR \1gCASH\1w TO \1mSPEND AT FORTS \1wALONG");
+        console.putmsg("\r\n\1hOR YOU CAN SAVE SOME OF YOUR \1gCASH\1w TO \1mSPEND AT CARAVANSERAIS \1wALONG");
         console.putmsg("\r\n\1hTHE WAY WHEN YOU RUN LOW. HOWEVER, ITEMS COST MORE AT");
-        console.putmsg("\r\n\1hTHE FORTS. YOU CAN ALSO GO \1rHUNTING\1w ALONG THE WAY TO GET");
+        console.putmsg("\r\n\1hTHE CARAVANSERAIS. YOU CAN ALSO GO \1rHUNTING\1w ALONG THE WAY TO GET");
         console.putmsg("\r\n\1hMORE \1nFOOD.");
         console.crlf();
         console.putmsg("\r\n\1hWHENEVER YOU HAVE TO USE YOUR TRUSTY RIFLE ALONG THE WAY,");
@@ -215,7 +215,7 @@ function OregonTrail() {
     }
 
     function getAnimals() {
-        console.putmsg("\1h\1mHOW MUCH DO YOU WANT TO SPEND ON YOUR OXEN TEAM\r\n \1y minimum : 201 \r\n");
+        console.putmsg("\1h\1mHOW MUCH DO YOU WANT TO SPEND ON YOUR CAMEL TEAM\r\n \1y minimum : 201 \r\n");
         animalsAMT = console.getnum();
         while (300 <= animalsAMT || animalsAMT <= 200) {
             if (animalsAMT <= 200) {
@@ -469,7 +469,7 @@ function OregonTrail() {
     }
 
     function fortHuntContinue() {
-        console.putmsg("\r\n\r\n\1h\1wDO YOU WANT TO \1m(1) STOP AT THE NEXT FORT, \1h\1r(2) HUNT, ");
+        console.putmsg("\r\n\r\n\1h\1wDO YOU WANT TO \1m(1) STOP AT THE NEXT CARAVANSERAI, \1h\1r(2) HUNT, ");
         console.putmsg("OR \1h\1g(3) CONTINUE \1i\1y?\1n");
         actionChoice = console.getnum();
         if (actionChoice == 1) {
@@ -882,7 +882,7 @@ function OregonTrail() {
             quickestDraw();
         }
         else {
-            console.putmsg("\r\n\1h\1yYOU GOT \1rSHOT \1yIN THE LEG AND THEY TOOK ONE OF YOUR \1wOXEN");
+            console.putmsg("\r\n\1h\1yYOU GOT \1rSHOT \1yIN THE LEG AND THEY TOOK ONE OF YOUR \1wCAMELS");
             woundedFlag = 1;
             console.putmsg("\r\nBETTER HAVE A DOC LOOK AT YOUR WOUND");
             supplyAMT = supplyAMT - 5;
@@ -923,7 +923,7 @@ function OregonTrail() {
         }
 
         if (eventNo == 2) {
-            console.putmsg("\1cOX INJURES LEG\r\n\1y---\r\n\1r\1iSLOWS YOU DOWN REST OF TRIP\1i\r\n");
+            console.putmsg("\1cCAMEL INJURES LEG\r\n\1y---\r\n\1r\1iSLOWS YOU DOWN REST OF TRIP\1i\r\n");
             totalMileage = totalMileage - 25;
             animalsAMT = animalsAMT - 20;
             mountains();
@@ -936,7 +936,7 @@ function OregonTrail() {
             mountains();
         }
         if (eventNo == 4) {
-            console.putmsg("\1bOX WANDERS OFF\--- \1h\1mSPEND TIME LOOKING FOR IT\r\n");
+            console.putmsg("\1bCAMEL WANDERS OFF\--- \1h\1mSPEND TIME LOOKING FOR IT\r\n");
             totalMileage = totalMileage - 17;
             mountains();
         }
@@ -1059,7 +1059,7 @@ function OregonTrail() {
             }
         }
         if (eventNo == 15) {
-            console.putmsg("HELPFUL INDIANS SHOW YOU WHERE TO FIND MORE FOOD");
+            console.putmsg("HELPFUL KYRGYZ NOMADS SHOW YOU WHERE TO FIND MORE FOOD");
             foodAMT = foodAMT + 14;
             mountains();
         }
@@ -1076,7 +1076,7 @@ function OregonTrail() {
         if (Math.random() * 10 < 9 - ((Math.pow(totalMileage / 100 - 15, 2) + 72) / (Math.pow(totalMileage / 100 - 15), 2) + 12)) {
             hailStorm();
         }
-        console.putmsg("\r\n\1yRUGGED MOUNTAINS\r\n\1h \1y/\1w\n^\1y.\1c~\1y/\1w^\1y.\1c~\1y/\1w^\1y.\1c~\r\n");
+        console.putmsg("\r\n\1yTIAN SHAN MOUNTAINS\r\n\1h \1y/\1w\n^\1y.\1c~\1y/\1w^\1y.\1c~\1y/\1w^\1y.\1c~\r\n");
         console.pause();
         if (Math.random() < .1) {
 
@@ -1108,7 +1108,7 @@ function OregonTrail() {
                 blizzard();
             }
             else {
-                console.putmsg("\1h\1cYOU MADE IT SAFELY THROUGH SOUTH PASS--\1rNO SNOW\r\n");
+                console.putmsg("\1h\1cYOU MADE IT SAFELY THROUGH TORUGART PASS--\1rNO SNOW\r\n");
                 checkMileage17hundred();
             }
         }
@@ -1212,7 +1212,7 @@ function OregonTrail() {
             telegraph();
         }
         else {
-            console.putmsg("\1mBUT YOUR AUNT SADIE IN ST. LOUIS IS REALLY WORRIED ABOUT YOU");
+            console.putmsg("\1mBUT YOUR AUNT SADIE IN KASHGAR IS REALLY WORRIED ABOUT YOU");
             console.crlf();
             telegraph();
         }
@@ -1247,13 +1247,13 @@ function OregonTrail() {
         console.putmsg("\r\n\1h\1i\1yTHAT WILL BE $4.50 FOR THE TELEGRAPH CHARGE.\1n\r\n");
         console.crlf();
         console.putmsg("\1h\1wWE THANK YOU FOR THIS INFORMATION AND WE ARE SORRY YOU ");
-        console.putmsg("\1h\1wDIDN'T MAKE IT TO THE GREAT TERRITORY OF OREGON ");
+        console.putmsg("\1h\1wDIDN'T MAKE IT TO THE GREAT CITY OF BISHKEK ");
         console.putmsg("\1h\1wBETTER LUCK NEXT TIME");
         console.crlf();
         console.crlf();
         console.putmsg("\1h\1wSINCERELY");
         console.crlf();
-        console.putmsg("\1gTHE OREGONCITY CHAMBER OF COMMERCE\r\n\r\n");
+        console.putmsg("\1gTHE BISHKEK CHAMBER OF COMMERCE\r\n\r\n");
         digGrave();
         throw "gameOver";
         console.putmsg("\1r\1iGAME OVER");
@@ -1269,9 +1269,9 @@ function OregonTrail() {
         console.beep();
         console.beep();
         console.beep();
-        console.putmsg("YOU FINALLY ARRIVED AT OREGONCITY");
+        console.putmsg("YOU FINALLY ARRIVED AT BISHKEK");
         console.putmsg("AFTER 2040 LONG MILES---HOORAY!!!!!");
-        console.putmsg("A REAL PIONEER!");
+        console.putmsg("A REAL SILK ROAD PIONEER!");
         console.crlf();
         twoWeekFraction = parseInt(twoWeekFraction * 14);
         turnNumber = turnNumber * 14 + twoWeekFraction;
@@ -1320,12 +1320,12 @@ function OregonTrail() {
         if (foodAMT < 0) {
             foodAMT = 0;
         }
-        console.putmsg(parseInt(foodAMT) + parseInt(ammoAMT) + parseInt(clothingAMT) + parseInt(supplyAMT) + parseInt(cashAfterInitialPurchase));
+        console.putmsg(parseInt(foodAMT) + parseInt(ammoAMT) + parseInt(clothingAMT) + parseInt(supplyAMT) + parseInt(cashInitialPurchase));
         console.crlf();
-        console.putmsg("PRESIDENT JAMES K. POLK SENDS YOU HIS");
+        console.putmsg("THE GOVERNOR OF KYRGYZSTAN SENDS YOU HIS");
         console.putmsg("HEARTIEST CONGRATULATIONS");
         console.crlf();
-        console.putmsg("AND WISHES YOU A PROSERPOUS LIFE AHEAD");
+        console.putmsg("AND WISHES YOU A PROSPEROUS LIFE AHEAD");
         console.crlf();
         console.putmsg("AT YOUR NEW HOME");
         newHighScore();
